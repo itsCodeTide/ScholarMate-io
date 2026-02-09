@@ -1,0 +1,12 @@
+
+Act as a critical academic reviewer (NeurIPS/CVPR standard).
+Identify EXACTLY THREE (3) distinct weaknesses or limitations.
+
+STRICT FORMATTING RULES:
+- Use a Numbered List (1., 2., 3.).
+- Format: **Title**: Description.
+
+REQUIRED CONTENT:
+1. **[Technical Flaw/Gap]**: e.g., Missing baselines, weak ablation studies.
+2. **[Methodological Issue]**: e.g., Data leakage, specific assumption violations.
+3. **[Scalability/Reproducibility]**: e.g., High compute cost, missing hyperparameters.

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarMate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <div class="max-w-4xl mx-auto p-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-900">ScholarMate</h1>
+            <p class="text-slate-600">Full-Stack Python Edition</p>
+        </header>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <div id="upload-section" class="text-center">
+                <input type="file" id="pdf-upload" accept=".pdf" class="hidden">
+                <label for="pdf-upload" class="cursor-pointer inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    <span>Upload PDF to Analyze</span>
+                </label>
+                <div id="file-name" class="mt-4 text-sm text-slate-500"></div>
+                <button id="analyze-btn" class="mt-4 bg-slate-900 text-white px-6 py-2 rounded-lg hidden">Start Analysis</button>
+            </div>
+
+            <div id="loading" class="hidden text-center py-12">
+                <div class="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+                <p class="text-slate-600">Processing with Gemini 3 Pro...</p>
+            </div>
+
+            <div id="results" class="hidden space-y-8 mt-8">
+                <section>
+                    <h2 class="text-xl font-bold mb-4">Summary</h2>
+                    <div id="summary-content" class="prose max-w-none text-slate-700"></div>
+                </section>
+                
+                <section>
+                    <h2 class="text-xl font-bold mb-4">Critique</h2>
+                    <div id="critique-content" class="prose max-w-none text-slate-700"></div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold mb-4">Experiment Plan</h2>
+                    <div id="experiment-content" class="prose max-w-none text-slate-700"></div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold mb-4">Python Code</h2>
+                    <pre id="code-content" class="bg-slate-900 text-slate-300 p-4 rounded-lg overflow-x-auto font-mono text-sm"></pre>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('pdf-upload');
+        const fileNameDisplay = document.getElementById('file-name');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const loadingDiv = document.getElementById('loading');
+        const resultsDiv = document.getElementById('results');
+
+        let selectedFile = null;
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) {
+                selectedFile = e.target.files[0];
+                fileNameDisplay.textContent = selectedFile.name;
+                analyzeBtn.classList.remove('hidden');
+            }
+        });
+
+        analyzeBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+
+            loadingDiv.classList.remove('hidden');
+            analyzeBtn.classList.add('hidden');
+            document.getElementById('upload-section').classList.add('hidden');
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) throw new Error('Analysis failed');
+                
+                const data = await response.json();
+                
+                document.getElementById('summary-content').innerText = data.summary;
+                document.getElementById('critique-content').innerText = data.critique;
+                document.getElementById('experiment-content').innerText = data.experiment_plan;
+                document.getElementById('code-content').textContent = data.python_code;
+                
+                resultsDiv.classList.remove('hidden');
+            } catch (err) {
+                alert('Error: ' + err.message);
+                location.reload();
+            } finally {
+                loadingDiv.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

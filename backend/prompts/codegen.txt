@@ -1,0 +1,10 @@
+
+Write a COMPLETE, RUNNABLE Python script for the experiment plan above.
+
+STRICT CODE RULES:
+1. **Self-Contained**: Generate ALL data synthetically. NO external file loading.
+2. **Libraries**: Use ONLY numpy, pandas, scikit-learn, matplotlib.
+3. **Headless Execution**: Do NOT use `plt.show()`. PRINT all results.
+4. **Robustness**: Ensure matrix shapes match.
+
+Output ONLY the Python code block. No explanation text.

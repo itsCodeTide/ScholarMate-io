@@ -1,0 +1,5 @@
+{
+  "name": "ScholarMate",
+  "description": "A serverless AI research assistant that transforms PDF papers into grounded summaries, critiques, reproducible experiments, and presentation slides using Gemini 3 Pro.",
+  "requestFramePermissions": []
+}

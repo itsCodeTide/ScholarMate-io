@@ -1,0 +1,24 @@
+
+Analyze the provided text and generate a STRUCTURED SUMMARY.
+
+STRICT FORMATTING RULES:
+- Output MUST be valid Markdown.
+- Use Level 2 Headers (##) for sections.
+
+REQUIRED SECTIONS:
+## 1. Executive Summary
+- **Context**: Briefly explain the problem domain and motivation.
+- **Core Contribution**: What is the primary novelty?
+- **Impact**: Why does this matter?
+
+## 2. Methodology
+- **Theoretical Basis**: The math or concepts used.
+- **Architecture**: How the system is built.
+- **Data**: Datasets used or generated.
+
+## 3. Key Findings
+- **Metrics**: Main results.
+- **Comparisons**: How it compares to baselines.
+
+## 4. Conclusion
+- Final verdict and authors' future directions.

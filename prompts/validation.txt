@@ -1,0 +1,16 @@
+Validate the following generated research artifacts against the original paper.
+
+Artifacts to Check:
+1. Summary: {summary}
+2. Critique: {critique}
+3. Experiment Plan: {experiment_plan}
+
+TASK:
+Check for:
+- Hallucinated claims
+- Inconsistencies between summary, critique, and experiment
+- Unsupported assumptions
+
+If issues exist, list them clearly.
+If none exist, output:
+"Outputs are internally consistent and grounded."

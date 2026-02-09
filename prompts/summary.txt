@@ -1,0 +1,20 @@
+Analyze this paper and provide a comprehensive, structured technical summary.
+
+Output Structure (Markdown):
+
+## 1. Executive Summary
+*   **Context**: The broader field and specific problem addressed.
+*   **Core Contribution**: The main innovation or thesis.
+*   **Impact**: Why this work is significant.
+
+## 2. Methodology & Architecture
+*   **Theoretical Basis**: Mathematical or theoretical foundation.
+*   **System Design**: Key components/algorithms.
+*   **Data Strategy**: Collection/generation methods.
+
+## 3. Key Findings
+*   **Metrics**: Specific numerical results (SOTA comparison, accuracy).
+*   **Evidence**: Description of key graphs/visuals.
+
+## 4. Conclusions
+*   Authors' final stance and future work.

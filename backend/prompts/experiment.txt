@@ -1,0 +1,13 @@
+
+Design a REPRODUCIBLE MINI-EXPERIMENT based on this paper.
+Target audience: A researcher trying to verify the core concept using synthetic data.
+
+STRICT FORMATTING RULES:
+- Use Markdown Bold (**Label**) for fields.
+
+REQUIRED FIELDS:
+**Objective**: [One sentence goal]
+**Data Description**: [Specifics on synthetic data structure: features, label distribution, size. MUST be generating using numpy/sklearn]
+**Method**: [Step-by-step logic: Preprocessing -> Model -> Eval]
+**Evaluation Metric**: [Primary metric to watch]
+**Expected Outcome**: [Hypothesis on what the script will output]

@@ -1,0 +1,19 @@
+You are acting as an academic reviewer.
+
+TASK:
+Identify EXACTLY THREE concrete weaknesses or limitations of the paper.
+
+REQUIREMENTS:
+- Each point must be specific and technical.
+- Base each critique ONLY on what is stated or clearly missing in the paper.
+- Avoid generic criticism.
+- Focus on:
+  - experimental design
+  - dataset limitations
+  - evaluation methodology
+  - scalability or reproducibility
+
+OUTPUT FORMAT (Markdown):
+1. **Short Title**: Explanation (2–3 concise technical sentences).
+2. **Short Title**: Explanation (2–3 concise technical sentences).
+3. **Short Title**: Explanation (2–3 concise technical sentences).

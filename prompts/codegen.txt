@@ -1,0 +1,16 @@
+Generate runnable Python code for the experiment described below.
+
+Experiment Plan:
+{experiment_plan}
+
+STRICT RULES:
+- Use ONLY these libraries: numpy, pandas, scikit-learn, matplotlib
+- Do NOT use deep learning frameworks.
+- Do NOT use external files or APIs.
+- Generate any required data inside the code (e.g. using numpy.random or sklearn.datasets).
+- The code MUST run top-to-bottom with no edits.
+- Ensure strict reproducibility and clear output of results.
+
+OUTPUT FORMAT:
+- Output ONLY valid Python code.
+- Add comments to explain necessary lines and how they relate to the paper's concepts.

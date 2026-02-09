@@ -1,0 +1,23 @@
+
+Create content for a 5-slide technical presentation summarizing the paper and experiment.
+
+Context:
+{summary}
+{experiment_plan}
+
+TASK:
+Create slide text summarizing the paper and experiment.
+
+SLIDE STRUCTURE:
+1. Problem & Motivation
+2. Core Idea
+3. Method Overview
+4. Reproducible Experiment
+5. Key Takeaways & Next Steps
+
+REQUIREMENTS:
+- Each slide must have:
+  - A clear title
+  - 3–5 concise bullet points
+
+Return JSON array of objects with 'title' and 'bullets' (string array) properties.

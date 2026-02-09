@@ -1,0 +1,29 @@
+Design ONE reproducible mini-experiment inspired by the paper.
+
+GOAL:
+The experiment must help a student understand or validate a core idea from the paper.
+
+STRICT CONSTRAINTS:
+- Must run in under 5 minutes on a laptop.
+- Use only standard Python libraries (sklearn, numpy, pandas, matplotlib).
+- Must be educational and realistic.
+
+REQUIREMENTS:
+- If no dataset is provided, use a small synthetic dataset.
+- Clearly define:
+  - Objective
+  - Data
+  - Method
+  - Evaluation metric
+- Do NOT overcomplicate.
+
+OUTPUT FORMAT (Use Markdown):
+**Experiment Objective**: [text]
+
+**Data Description**: [text]
+
+**Method**: [text]
+
+**Evaluation Metric**: [text]
+
+**Expected Outcome**: [text]

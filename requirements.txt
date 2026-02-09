@@ -1,0 +1,12 @@
+
+flask
+flask-cors
+python-dotenv
+google-genai
+pypdf
+numpy
+pandas
+scikit-learn
+matplotlib
+python-pptx
+gunicorn
